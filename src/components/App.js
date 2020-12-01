@@ -1,5 +1,6 @@
 import React , {useState}from 'react' ;
 import SignIn from './SignIn'
+import Main from './Main'
 
 export default () => {
   const [name, setName] = useState('')
@@ -7,7 +8,7 @@ export default () => {
 
   return (
     <>
-      <SignIn setName={setName}/>
+      { name ? <Main name={name}/>:<SignIn setName={setName}/> }
     </>
   )
 };
