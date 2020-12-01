@@ -7,7 +7,7 @@ export default () => {
 
   return (
     <>
-      <SignIn name={name}/>
+      <SignIn setName={setName}/>
     </>
   )
 };
