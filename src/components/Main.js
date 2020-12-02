@@ -15,8 +15,8 @@ const Main = ({name})=>{
     const classes = useStyles()
     return(
         <div className={classes.root}>
-            <MessageList name={name}/>
-            <MessageInputField />
+            <MessageList />
+            <MessageInputField name={name}/>
         </div>
     )
 }
