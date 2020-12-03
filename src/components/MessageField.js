@@ -11,7 +11,7 @@ const MessageField =  ({name, setText, text}) => {
                 const text = e.target.value
                 if(text === '') return
                 if(e.key === 'Enter' && !(isComposed) ){
-                    pushMessage({ name: 'Jimbo', text})
+                    pushMessage({ name, text})
                     setText('')
                     e.preventDefault()
                 }
