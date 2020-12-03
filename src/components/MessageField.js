@@ -7,7 +7,7 @@ const MessageField =  ({name, setText, text,inputEl}) => {
     return <TextField
             autoFocus
              fullWidth={true}
-             const inputRef = {inputEl}
+             inputRef = {inputEl}
              onChange={(e) => setText(e.target.value)}
              onKeyDown={(e) => {
                 const text = e.target.value
