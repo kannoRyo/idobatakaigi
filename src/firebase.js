@@ -1,17 +1,28 @@
 import firebase from 'firebase'
 
+console.log(process.env.REACT_APP_FOO)
+const {
+    REACT_APP_FIREBASE_API_KEY,
+    REACT_APP_FIREBASE_AUTH_DOMAIN,
+    REACT_APP_FIREBASE_DATABASE_URL,
+    REACT_APP_FIREBASE_PROJECT_ID,
+    REACT_APP_FIREBASE_STORAG_EBUCKET,
+    REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    REACT_APP_FIREBASE_APP_ID
+} = process.env
+
 const firebaseConfig = {
-    apiKey: "AIzaSyCjjnXVLraC6PPlqHW4fnMYA5B5tNlnpzE",
-    authDomain: "idobatakaigi-with-ham-7921c.firebaseapp.com",
-    databaseURL: "https://idobatakaigi-with-ham-7921c.firebaseio.com",
-    projectId: "idobatakaigi-with-ham-7921c",
-    storageBucket: "idobatakaigi-with-ham-7921c.appspot.com",
-    messagingSenderId: "586295891447",
-    appId: "1:586295891447:web:32f72e9f8a27a0a7db8af2"
+    apiKey: REACT_APP_FIREBASE_API_KEY,
+    authDomain: REACT_APP_FIREBASE_AUTH_DOMAIN,
+    databaseURL: REACT_APP_FIREBASE_DATABASE_URL,
+    projectId: REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: REACT_APP_FIREBASE_STORAG_EBUCKET,
+    messagingSenderId: REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: REACT_APP_FIREBASE_APP_ID
 };
 
 firebase.initializeApp(firebaseConfig)
 const database = firebase.database()
-const messageRef = database.ref('messages')
+const messagesRef = database.ref('messages')
 
-export const pushMessage = ({name, text}) => {messageRef.push({name, text})}
+export const pushMessage = ({name, text}) => {messagesRef.push({name, text})}
