@@ -4,7 +4,7 @@ import Main from './Main'
 import config from '../config.json'
 
 export default () => {
-  const [name, setName] = useState('aiu')
+  const [name, setName] = useState('')
   console.log({name})
 
   return (
