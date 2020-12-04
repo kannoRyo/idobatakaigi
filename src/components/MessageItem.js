@@ -21,6 +21,7 @@ const MessageItem = ({isLastItem, name, text})=>{
             ref.current.scrollIntoView({ behavior: 'smooth'})
         }
     },[isLastItem])
+    
     return(
         <ListItem divider={true} ref={ref}> 
         <ListItemAvatar>
